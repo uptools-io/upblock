@@ -1,0 +1,964 @@
+/* Variables */
+:root {
+    --upblock-primary: #18181b;
+    --upblock-primary-hover: #27272a;
+    --upblock-background: #ffffff;
+    --upblock-foreground: #18181b;
+    --upblock-card-background: #ffffff;
+    --upblock-border: #e4e4e7;
+    --upblock-muted: #71717a;
+    --upblock-radius: 0.75rem;
+    --upblock-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --upblock-ring: 0 0 0 1px rgb(24 24 27 / 0.05);
+}
+
+/* Header */
+.upblock-header {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.upblock-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.upblock-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.upblock-branding {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.upblock-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.upblock-logo .dashicons {
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.upblock-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.upblock-version {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.upblock-description {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Admin Layout */
+.upblock-admin {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    color: var(--upblock-foreground);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+.upblock-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.upblock-card-full {
+    grid-column: 1 / -1;
+}
+
+/* Cards */
+.upblock-card {
+    background: var(--upblock-card-background);
+    border: 1px solid var(--upblock-border);
+    border-radius: var(--upblock-radius);
+    box-shadow: var(--upblock-shadow);
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.upblock-card:hover {
+    box-shadow: var(--upblock-ring);
+}
+
+.upblock-card-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--upblock-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    min-height: 2.2rem;
+}
+
+.upblock-card-header h2 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: var(--upblock-foreground);
+}
+
+.upblock-card-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Buttons */
+.upblock-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--upblock-radius);
+    font-weight: 500;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border: 1px solid var(--upblock-border);
+    background: var(--upblock-background);
+    color: var(--upblock-foreground);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    height: 2.25rem;
+}
+
+.upblock-button:hover {
+    background: #f4f4f5;
+    border-color: #e4e4e7;
+}
+
+.upblock-button-primary {
+    background: var(--upblock-primary);
+    color: white;
+    border-color: var(--upblock-primary);
+}
+
+.upblock-button-primary:hover {
+    background: var(--upblock-primary-hover);
+    border-color: var(--upblock-primary-hover);
+}
+
+.upblock-button-small {
+    height: 2rem;
+    padding: 0 0.75rem;
+    font-size: 0.75rem;
+}
+
+.upblock-button-icon {
+    padding: 0.25rem;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid var(--upblock-border);
+}
+
+.upblock-button-danger {
+    background: #ef4444;
+    color: white;
+    border-color: #ef4444;
+}
+
+.upblock-button-danger:hover {
+    background: #dc2626;
+    border-color: #dc2626;
+}
+
+/* Button states */
+.upblock-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #f4f4f5;
+    border-color: #e4e4e7;
+    color: #71717a;
+}
+
+.upblock-button:disabled:hover {
+    background: #f4f4f5;
+    border-color: #e4e4e7;
+    color: #71717a;
+}
+
+.upblock-button-small:disabled {
+    background: #f4f4f5;
+    border-color: #e4e4e7;
+    color: #71717a;
+}
+
+/* Lists */
+.upblock-domains-list,
+.upblock-urls-list,
+.upblock-top-domains {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+    min-height: 200px;
+}
+
+.upblock-domain-item,
+.upblock-url-item,
+.upblock-top-domain-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: #fafafa;
+    border: 1px solid var(--upblock-border);
+    border-radius: var(--upblock-radius);
+    transition: background-color 0.2s;
+}
+
+.upblock-domain-item:hover,
+.upblock-url-item:hover,
+.upblock-top-domain-item:hover {
+    background: #f4f4f5;
+}
+
+/* Table */
+.upblock-table-container {
+    border: 1px solid var(--upblock-border);
+    border-radius: var(--upblock-radius);
+    overflow: hidden;
+}
+
+.upblock-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.875rem;
+    border-spacing: 0;
+}
+
+.upblock-table tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.upblock-table tr:hover {
+    background: #f4f4f5;
+}
+
+.upblock-table th,
+.upblock-table td {
+    padding: 0.75rem 1rem;
+    color: var(--upblock-foreground);
+    margin: 0;
+    vertical-align: middle;
+}
+
+.upblock-table th {
+    background: #f4f4f5;
+    font-weight: 500;
+    color: var(--upblock-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.upblock-table tr:last-child td {
+    border-bottom: none;
+}
+
+.upblock-url-cell {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Status Badges */
+.upblock-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+
+.upblock-status-blocked {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.upblock-status-allowed {
+    background: #f0fdf4;
+    color: #166534;
+}
+
+/* Pagination */
+.upblock-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+.upblock-pagination .upblock-button {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: var(--upblock-radius);
+    border: 1px solid var(--upblock-border);
+    background: var(--upblock-background);
+    color: var(--upblock-foreground);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.upblock-pagination .upblock-button:hover {
+    background: #f4f4f5;
+    border-color: #e4e4e7;
+}
+
+.upblock-pagination .upblock-button-current {
+    background: var(--upblock-primary);
+    border-color: var(--upblock-primary);
+    color: white;
+}
+
+.upblock-pagination .upblock-button-current:hover {
+    background: var(--upblock-primary-hover);
+    border-color: var(--upblock-primary-hover);
+}
+
+.upblock-pagination .dashicons {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upblock-pagination-dots {
+    color: var(--upblock-muted);
+    padding: 0 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .upblock-pagination {
+        flex-wrap: wrap;
+    }
+    
+    .upblock-pagination .upblock-button {
+        min-width: 2.25rem;
+        height: 2.25rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Modal */
+.upblock-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999999;
+    align-items: center;
+    justify-content: center;
+}
+
+.upblock-modal.is-active {
+    display: flex;
+}
+
+.upblock-modal-content {
+    background: var(--upblock-background);
+    border-radius: var(--upblock-radius);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.upblock-modal-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--upblock-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upblock-modal-header h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--upblock-foreground);
+}
+
+.upblock-modal-close {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--upblock-muted);
+}
+
+.upblock-modal-close:hover {
+    color: var(--upblock-foreground);
+}
+
+.upblock-modal-body {
+    padding: 1.5rem;
+}
+
+.upblock-modal-footer {
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid var(--upblock-border);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+}
+
+/* Forms */
+.upblock-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    border-radius: var(--upblock-radius);
+    border: 1px solid var(--upblock-border);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: var(--upblock-background);
+}
+
+.upblock-input:focus {
+    outline: none;
+    border-color: var(--upblock-primary);
+    box-shadow: var(--upblock-ring);
+}
+
+.upblock-form-group {
+    margin-bottom: 1rem;
+}
+
+.upblock-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--upblock-foreground);
+}
+
+.upblock-help-text {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--upblock-muted);
+}
+
+/* Domain Count */
+.upblock-domain-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--upblock-muted);
+}
+
+/* Response Time */
+.upblock-response-time {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--upblock-foreground);
+}
+
+.upblock-muted {
+    color: var(--upblock-muted);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .upblock-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .upblock-card-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .upblock-table th,
+    .upblock-table td {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* Table Actions */
+.upblock-table td:last-child {
+    white-space: nowrap;
+    min-width: max-content;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.upblock-table td .upblock-button + .upblock-button {
+    margin-left: 0;
+}
+
+/* Button Variants */
+.upblock-button-small.upblock-block-domain {
+    background: var(--upblock-primary);
+    color: white;
+    border-color: var(--upblock-primary);
+}
+
+.upblock-button-small.upblock-block-domain:hover {
+    background: var(--upblock-primary-hover);
+    border-color: var(--upblock-primary-hover);
+}
+
+.upblock-button-small.upblock-block-url {
+    background: #ef4444;
+    color: white;
+    border-color: #ef4444;
+}
+
+.upblock-button-small.upblock-block-url:hover {
+    background: #dc2626;
+    border-color: #dc2626;
+}
+
+/* Info Box */
+.upblock-info-box {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: var(--upblock-radius);
+    border: 1px solid var(--upblock-border);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.upblock-info-box-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--upblock-border);
+}
+
+.upblock-info-box-header .dashicons {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    color: #f59e0b;
+}
+
+.upblock-info-box-header h2 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--upblock-foreground);
+}
+
+.upblock-info-box-content {
+    padding: 0;
+}
+
+.upblock-info-box-content p {
+    margin: 0 0 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--upblock-foreground);
+}
+
+.upblock-info-box-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.upblock-info-box-content li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: var(--upblock-foreground);
+}
+
+.upblock-info-box-content li .dashicons {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
+    color: #0ea5e9;
+}
+
+.upblock-info-box-content li:last-child {
+    margin-bottom: 1.5rem;
+}
+
+.upblock-info-box-content p:last-child {
+    margin-bottom: 0;
+}
+
+.upblock-info-box-tip {
+    background: #f0fdf4;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: var(--upblock-radius);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.upblock-info-box-tip .dashicons {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
+    color: #16a34a;
+}
+
+.upblock-info-box-tip span {
+    color: #16a34a;
+}
+
+/* Header Actions */
+.upblock-header-actions {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.upblock-header-actions .upblock-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 0.875rem;
+    padding: 0 0.75rem;
+    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.upblock-header-actions .upblock-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+.upblock-header-actions .upblock-button .dashicons {
+    width: 1rem;
+    height: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+/* Checkbox Label */
+.upblock-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.upblock-checkbox-label input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+}
+
+/* Form Actions */
+.upblock-form-actions {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--upblock-border);
+}
+
+@media (max-width: 768px) {
+    .upblock-header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .upblock-header-actions {
+        width: 100%;
+    }
+    
+    .upblock-header-actions .upblock-button {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+/* Modern Toggle Switch */
+.upblock-toggle-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #fafafa;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.upblock-toggle-switch-content {
+    flex: 1;
+}
+
+.upblock-toggle-switch-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 0.25rem;
+    color: #18181b;
+}
+
+.upblock-toggle-switch-description {
+    font-size: 0.75rem;
+    color: #71717a;
+    margin: 0;
+}
+
+.upblock-toggle {
+    position: relative;
+    display: inline-block;
+    width: 3.9rem;
+    height: 1.95rem;
+    margin-left: 1rem;
+}
+
+.upblock-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.upblock-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e4e4e7;
+    transition: .4s;
+    border-radius: 1.5rem;
+}
+
+.upblock-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 1.625rem;
+    width: 1.625rem;
+    left: 0.16rem;
+    bottom: 0.16rem;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.upblock-toggle input:checked + .upblock-toggle-slider {
+    background-color: #18181b;
+}
+
+.upblock-toggle input:checked + .upblock-toggle-slider:before {
+    transform: translateX(1.95rem);
+}
+
+/* Notification */
+.upblock-notification {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    z-index: 999999;
+    animation: slideIn 0.3s ease-out;
+    pointer-events: none;
+}
+
+.upblock-notification-content {
+    background: #18181b;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 300px;
+}
+
+.upblock-notification .dashicons {
+    color: #22c55e;
+    font-size: 1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.upblock-notification-message {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.upblock-notification.upblock-notification-hide {
+    animation: slideOut 0.3s ease-in forwards;
+}
+
+/* WordPress admin bar fix */
+@media screen and (max-width: 782px) {
+    .upblock-notification {
+        top: 66px;
+    }
+}
+
+/* Number Input */
+.upblock-number-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--upblock-border);
+}
+
+.upblock-number-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 1px solid var(--upblock-border);
+    background: var(--upblock-background);
+    border-radius: var(--upblock-radius);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.upblock-number-button:hover {
+    background: #f4f4f5;
+}
+
+.upblock-number-field {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.upblock-number-field input {
+    width: 4rem;
+    height: 2rem;
+    padding: 0 0.5rem;
+    border: 1px solid var(--upblock-border);
+    border-radius: var(--upblock-radius);
+    text-align: center;
+    font-size: 0.875rem;
+    background: white;
+}
+
+.upblock-number-label {
+    font-size: 0.875rem;
+    color: var(--upblock-muted);
+}
+
+/* Navigation Menu */
+.upblock-nav-menu {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--upblock-card-background, #ffffff);
+    padding: 0.5rem;
+    border-radius: var(--upblock-radius, 0.75rem);
+    box-shadow: var(--upblock-shadow, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+}
+
+.upblock-nav-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: var(--upblock-radius, 0.75rem);
+    color: var(--upblock-foreground, #18181b);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    gap: 8px;
+}
+
+.upblock-nav-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--upblock-foreground, #18181b);
+}
+
+.upblock-nav-item.active {
+    background: var(--upblock-primary, #18181b);
+    color: #fff;
+}
+
+.upblock-nav-item .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+} 

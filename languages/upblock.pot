@@ -1,0 +1,171 @@
+# Copyright (C) 2024 Your Name
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: upBlock 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/upblock\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-02-15T12:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: upblock\n"
+
+#: upblock.php:123
+msgid "upTools"
+msgstr ""
+
+#: upblock.php:124
+msgid "upTools"
+msgstr ""
+
+#: upblock.php:138
+msgid "upBlock"
+msgstr ""
+
+#: upblock.php:139
+msgid "upBlock"
+msgstr ""
+
+#: includes/admin/views/main.php:12
+msgid "Blocked Domains"
+msgstr ""
+
+#: includes/admin/views/main.php:14
+msgid "Add Domain"
+msgstr ""
+
+#: includes/admin/views/main.php:31
+msgid "Blocked URLs"
+msgstr ""
+
+#: includes/admin/views/main.php:33
+msgid "Add URL"
+msgstr ""
+
+#: includes/admin/views/main.php:50
+msgid "Top Domains (Last 7 Days)"
+msgstr ""
+
+#: includes/admin/views/main.php:57
+msgid "Block"
+msgstr ""
+
+#: includes/admin/views/main.php:67
+msgid "Recent HTTP Requests"
+msgstr ""
+
+#: includes/admin/views/main.php:73
+msgid "Time"
+msgstr ""
+
+#: includes/admin/views/main.php:74
+msgid "Domain"
+msgstr ""
+
+#: includes/admin/views/main.php:75
+msgid "URL"
+msgstr ""
+
+#: includes/admin/views/main.php:76
+msgid "Status"
+msgstr ""
+
+#: includes/admin/views/main.php:77
+msgid "Actions"
+msgstr ""
+
+#: includes/admin/views/main.php:89
+msgid "Blocked"
+msgstr ""
+
+#: includes/admin/views/main.php:89
+msgid "Allowed"
+msgstr ""
+
+#: includes/admin/views/main.php:95
+msgid "Block Domain"
+msgstr ""
+
+#: includes/admin/views/main.php:122
+msgid "Add Domain to Blocklist"
+msgstr ""
+
+#: includes/admin/views/main.php:126
+msgid "Domain Name"
+msgstr ""
+
+#: includes/admin/views/main.php:131
+msgid "Cancel"
+msgstr ""
+
+#: includes/admin/views/main.php:142
+msgid "Add URL Pattern to Blocklist"
+msgstr ""
+
+#: includes/admin/views/main.php:146
+msgid "URL Pattern"
+msgstr ""
+
+#: includes/admin/views/main.php:148
+msgid "Any URL containing this pattern will be blocked."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:13
+msgid "Permission denied."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:17
+msgid "Invalid nonce."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:22
+msgid "Domain is required."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:30
+msgid "Domain is already blocked."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:37
+msgid "Domain added successfully."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:39
+msgid "Failed to add domain."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:66
+msgid "Domain removed successfully."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:68
+msgid "Failed to remove domain."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:89
+msgid "URL is required."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:97
+msgid "URL is already blocked."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:104
+msgid "URL added successfully."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:106
+msgid "Failed to add URL."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:133
+msgid "URL removed successfully."
+msgstr ""
+
+#: includes/core/Ajax_Handler.php:135
+msgid "Failed to remove URL."
+msgstr "" 
