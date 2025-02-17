@@ -224,7 +224,16 @@ class Blocker {
                 'response_time' => 0
             ]);
 
-            return new \WP_Error('http_request_blocked', $block_reason);
+            return [
+                'headers'  => [],
+                'body'     => '',
+                'response' => [
+                    'code'    => 200,
+                    'message' => 'OK'
+                ],
+                'cookies'  => [],
+                'filename' => null
+            ];
         }
 
         return $pre;

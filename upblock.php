@@ -3,7 +3,7 @@
  * Plugin Name: upBlock
  * Plugin URI: https://uptools.io/plugins/upblock
  * Description: Monitor, log and block unwanted HTTP API calls in WordPress admin to improve performance.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: upTools
  * Author URI: https://uptools.io
  * Text Domain: upblock
@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Plugin constants
-define('UPBLOCK_VERSION', '1.0.0');
+define('UPBLOCK_VERSION', '1.0.1');
 define('UPBLOCK_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('UPBLOCK_PLUGIN_URL', plugin_dir_url(__FILE__));
 
@@ -293,16 +293,19 @@ class UpBlock {
             return;
         }
 
+        // Use minified versions in production
+        $suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
+
         wp_enqueue_style(
             'upblock-admin',
-            UPBLOCK_PLUGIN_URL . 'assets/css/admin.css',
+            UPBLOCK_PLUGIN_URL . 'assets/css/admin' . $suffix . '.css',
             [],
             UPBLOCK_VERSION
         );
 
         wp_enqueue_script(
             'upblock-admin',
-            UPBLOCK_PLUGIN_URL . 'assets/js/admin.js',
+            UPBLOCK_PLUGIN_URL . 'assets/js/admin' . $suffix . '.js',
             ['jquery'],
             UPBLOCK_VERSION,
             true

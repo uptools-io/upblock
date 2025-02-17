@@ -3,7 +3,7 @@ Contributors: uptools
 Tags: performance, security, http, monitoring, requests
 Requires at least: 5.0
 Tested up to: 6.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -81,6 +81,11 @@ Yes, upBlock is compatible with all major caching plugins and has been tested wi
 3. Top Domains - View which services are making the most requests
 
 == Changelog ==
+
+= 1.0.1 =
+* Enhanced user experience: Blocked requests now return empty responses instead of error messages
+* Improved compatibility with third-party plugins and themes
+* Better handling of blocked content for smoother admin dashboard operation
 
 = 1.0.0 =
 * Initial release
